@@ -1,42 +1,171 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TDT GAMING | ROBLOX HACK</title>
+    <title>Hình Ảnh Lớn Bên Trái và Phải</title>
     <style>
-         body {
-           background-image: ("robloxhack.png");
-           color: #000000;
-        }          
-        .container {
+        /* Cấu hình cơ bản */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #333;
+        }
+
+        /* Bố cục hiển thị */
+        .layout {
             display: flex;
             align-items: center;
-            margin: 20px;
+            justify-content: space-between;
+            padding: 50px;
         }
-        .container img {
-            max-width: 150px;
-            margin-right: 20px;
-            border-radius: 8px; /* Bo góc ảnh, có thể bỏ nếu không cần */
+
+        /* Hình ảnh bên trái và bên phải */
+        .image-left, .image-right {
+            flex: 1;
+            max-width: 5000px; /* Tăng kích thước hình ảnh lên đến 600px */
         }
-        .container .content {
-            max-width: 600px;
+
+        .image-left img, .image-right img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
-        .logo img {
-            height: 90px;
-        }   
+
+        /* Nội dung chính giữa */
+        .content {
+            flex: 1 1 calc(33.33% - 20px); /* Chia mỗi cột thành 1/3 */
+            text-align: center;
+            margin: 0 50px; /* Tăng khoảng cách giữa nội dung và ảnh */
+            border-radius: 10px;
+        }
+
+        .content h2 {
+            font-size: 48px; /* Tăng kích thước tiêu đề */
+            color: #007BFF;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 20px; /* Tăng kích thước chữ */
+            color: #555;
+            line-height: 1.8;
+        }
+        .content a {
+          background-color: #fff;
+          color: #ff0000;
+          padding: 10px 15px;
+          font-size: 14px;
+          text-decoration: none;
+          transition: background 0.3s ease;
+          border-radius: 6px;
+        }
+        .content a:hover {
+           background: #0056b3;
+        }
+        .buttondownload {
+            flex: 1 1 calc(33.33% - 20px); /* Chia mỗi cột thành 1/3 */
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+        }
+        .buttondownload a {
+            display: inline-block;
+            text-decoration: none;
+            background: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+            font-size: 14px;
+        }
+
+        .buttondownload a:hover {
+            background: #0056b3;
+        }
+        .navbar {
+            background-color: #000000; /* Cyan-dark header */
+            border-bottom: 3px solid #98F5F9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .navbar .status {
+            display: flex;
+            align-items: center;
+            color: #ff0000; /* Cyan text for status */
+        }
+
+        .navbar .status span {
+            font-weight: bold;
+            margin-left: 10px;
+        }
     </style>
 </head>
 <body>
-  <img src="LOGO.png" alt="Logo" width="500" height="600">
+<div class="navbar">
+    <img src="https://tdtgaming.vercel.app/LOGO.png" alt="Logo" id="logo">
+    <div class="status">
+        <i class="fas fa-terminal"></i>
+        <label id="dateTimeLabel"></label>
+
+  <script>
+    function updateDateTime() {
+      const now = new Date();
+      const year = now.getFullYear();
+      const date = now.toLocaleDateString(); // Formats as MM/DD/YYYY or localized format
+      const time = now.toLocaleTimeString(); // Formats as HH:MM:SS AM/PM or 24-hour based on locale
+
+      // Combine the parts
+      const dateTimeString = `Date: ${date}, Time: ${time}`;
+
+      // Update the label
+      document.getElementById('dateTimeLabel').textContent = dateTimeString;
+    }
+
+    // Update the date and time immediately
+    updateDateTime();
+
+    // Update the date and time every second
+    setInterval(updateDateTime, 1000);
+  </script>
+    </div>
+</div>
+    <div class="layout">
+        <!-- Ảnh bên trái -->
+        <div class="image-left">
+            <img src="https://tdtgaming.vercel.app/robloxhack.png" alt="Ảnh cực lớn bên trái">
+        </div>
+
+        <!-- Nội dung chính giữa -->
         <div class="content">
-    <div class="container">
-        <img src="pic_trulli.jpg" alt="Mô tả ảnh">
-        <div class="content">
-            <h2>Tiêu đề nội dung</h2>
-            <p>Đây là một đoạn nội dung bên phải ảnh. Bạn có thể thêm văn bản hoặc thông tin khác tại đây để hiển thị cùng với ảnh bên trái.</p>
+            <h2>Nội Dung Chính Giữa</h2>
+            <p>
+                Đây là phần nội dung nằm giữa hai ảnh cực lớn. Nội dung có thể dùng để truyền đạt thông điệp quan trọng 
+                hoặc thu hút sự chú ý của người dùng.
+            </p>
+            <a href="#">Tải ngay</a>
+            <a href="#">Vào Discord</a>
+        </div>
+
+        <!-- Ảnh bên phải -->
+        <div class="image-right">
+            <img src="https://tdtgaming.vercel.app/robloxhack.png" alt="Ảnh cực lớn bên phải">
         </div>
     </div>
-<script src= "script.js">
 </body>
 </html>
