@@ -114,6 +114,278 @@
             font-weight: bold;
             margin-left: 10px;
         }
+        .code-content {
+    color: var(--text);
+}
+.preview-editor {
+    padding: 1.5rem;
+    display: flex;
+    gap: 1.5rem;
+    font-family: var(--font-code);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+.line-numbers {
+    color: var(--text-secondary);
+    text-align: right;
+}
+.preview-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.05),
+        transparent
+    );
+    animation: shine 3s infinite;
+}
+.window-controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-right: 1rem;
+}
+
+.window-controls span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+.code-preview {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.preview-header {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+}
+.preview-tabs {
+    display: flex;
+    gap: 1rem;
+}
+
+.tab {
+    padding: 0.25rem 1rem;
+    border-radius: 4px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+}
+.hero {
+    min-height: 100vh;
+    padding: 120px 2rem 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.badge-glow {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    animation: shine 3s infinite;
+}
+
+.badge-icon {
+    font-size: 1.2rem;
+}
+
+.badge-text {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.hero-title {
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 1.5rem 0 1rem;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    -webkit-background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+.hero-description {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+
+.hero-actions {
+    display: flex !important;
+    align-items: center !important;
+    gap: 1rem !important;
+}
+
+.hero .btn-primary {
+    background: #00ff9d !important;
+    color: black !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    border: none !important;
+    font-size: 0.95rem !important;
+    width: 205px !important;
+    justify-content: center !important;
+    letter-spacing: 0.02em !important;
+}
+
+.hero .btn-primary i {
+    font-size: 1rem !important;
+    margin-left: 0.25rem !important;
+}
+
+.hero .btn-outline {
+    background: rgba(0, 0, 0, 0.3) !important;
+    color: var(--text) !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1.5rem !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    transition: all 0.3s ease !important;
+    text-decoration: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    font-size: 0.95rem !important;
+    width: 203px !important;
+    justify-content: center !important;
+    letter-spacing: 0.02em !important;
+}
+
+.hero .btn-outline i {
+    font-size: 1rem !important;
+    margin-right: 0.25rem !important;
+}
+
+.hero .btn-primary:hover,
+.hero .btn-outline:hover {
+    transform: translateY(-2px) !important;
+}
+.code-content {
+    color: var(--text);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes grid-move {
+    0% {
+        transform: perspective(500px) rotateX(60deg) translateY(0);
+    }
+    100% {
+        transform: perspective(500px) rotateX(60deg) translateY(50px);
+    }
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    20% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+@media (max-width: 1200px) {
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+    }
+
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+}
     </style>
 </head>
 <body>
@@ -153,18 +425,46 @@
 
         <!-- Nội dung chính giữa -->
         <div class="content">
-            <h2>Nội Dung Chính Giữa</h2>
+            <h2>Welcome To TDT</h2>
             <p>
-                Đây là phần nội dung nằm giữa hai ảnh cực lớn. Nội dung có thể dùng để truyền đạt thông điệp quan trọng 
-                hoặc thu hút sự chú ý của người dùng.
+               TOP 1 ROBLOX HACK FREE, MADE BY VIETNAMESE PEOPLE
             </p>
             <a href="#">Tải ngay</a>
             <a href="#">Vào Discord</a>
         </div>
 
         <!-- Ảnh bên phải -->
-        <div class="image-right">
-            <img src="robloxhack.png" alt="Ảnh cực lớn bên phải">
+        <div class="hero-visual">
+                <div class="code-preview">
+                    <div class="preview-header">
+                        <div class="window-controls">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="preview-tabs">
+                            <div class="tab active">main.lua</div>
+                        </div>
+                    </div>
+                    <div class="preview-editor">
+                        <div class="line-numbers">
+                            <span>1</span>
+                             <span>6</span>
+                          <span>2</span>
+                            <span>3</span>
+                            <span>4</span>
+                            <span>5</span>
+                             <span>7</span>
+                            <span>8</span>
+                        </div>
+                        <pre class="code-content"><code>-- TDT ON TOP
+                        print("TDT ON TOP")
+                        print("100% UNC")
+                        print("AND FREE!!!")</pre>
+                    </div>
+                    <div class="preview-glow"></div>
+                </div>
+            </div>
         </div>
     </div>
 </body>
