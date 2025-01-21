@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BinbinvoGaming Script Hub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #000000, #0679DE);
+            color: white;
+        }
+        nav {
+            background-color: #20232a;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        nav .logo {
+            display: flex;
+            align-items: center;
+        }
+        nav .logo img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            border-radius: 50%;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        nav a:hover {
+            background-color: #4b79a1;
+            border-radius: 5px;
+        }
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .scripts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 15px;
+        }
+        .script-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        .script-card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .script-card textarea {
+            width: 95%;
+            height: 120px;
+            resize: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: ##f3f3f3;
+            font-family: monospace;
+            color: #0887F6;
+            padding: 10px;
+            outline: none;
+            margin-top: 10px;
+        }
+        .script-card button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .script-card button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo">
+            <h1>Roblox Script Hub</h1>
+        </div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="credit.html">Developers</a>
+            <a href="#script">Scripts</a>
+            <a href="login.html">Key</a>
+        </div>
+    </nav>
+
+    <!-- Content Section -->
+    <div class="container">
+        <h1>Welcome to TDT Hub!</h1>
+            <div class="script-card">
+                <h2>Rival:</h2>
+                <img src="rival.png" alt="RIVAL>
+                <textarea id= "script" readonly>
+loadstring(game:HttpGet("https://tdtgaming.vercel.app/script/Rival.lua",true))() 
+                </textarea>
+                 <button onclick="copyScript('script')">Copy Script</button>
+            </div>
+
+            <!-- Add more script cards as needed -->
+        </div>
+    </div>
+
+    <script>
+function copyScript(textareaId) {
+    // Select the textarea using its ID
+    const textarea = document.getElementById(textareaId);
+    
+    // Select the text inside the textarea
+    textarea.select();
+    textarea.setSelectionRange(0, 99999); // For mobile devices
+    
+    // Copy the selected text to the clipboard
+    navigator.clipboard.writeText(textarea.value).then(() => {
+        alert("Script copied to clipboard!");
+    }).catch(err => {
+        console.error("Failed to copy:", err);
+    });
+}
+    </script>
+</body>
+</html>
+                 
+                
