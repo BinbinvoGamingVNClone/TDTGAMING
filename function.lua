@@ -1,3 +1,1 @@
-function getexecutorname()
-    print("TDT")
-end
+function getexecutorname() print("TDT") end local uas="TDT/Made By BinbinvoGaming ( A.K.A SonicWave Exploit Owner )" local old_request=request request=function(o) if type(o)~="table" then return old_request(o) end o.Headers=o.Headers or {} o.Headers["User-Agent"]=uas return old_request(o) end WebSocket=WebSocket or {} WebSocket.connect=function(u) if type(u)~="string" then return nil,"URL must be a string." end if not (u:match("^ws://") or u:match("^wss://")) then return nil,"Invalid WebSocket URL. Must start with 'ws://' or 'wss://'." end local cu=u:gsub("^ws://",""):gsub("^wss://","") if cu=="" or cu:match("^%s*$") then return nil,"Invalid WebSocket URL. No host specified." end return {Send=function(m) end,Close=function() end,OnMessage={},OnClose={}} end
